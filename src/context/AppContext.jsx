@@ -11,7 +11,7 @@ const ContextProvider = ({children})=>{
     const [isError, setIsError] = useState({show: false, msg: ''})
     const [query, setQuery] = useState('hacker')
 
-    const API_URL = `https://www.omdbapi.com/?apikey=${import.meta.env.VITE_API_KEY}&s=${query}`;
+    const API_URL = `http://www.omdbapi.com/?apikey=${import.meta.env.VITE_API_KEY}&s=${query}`;
 
     const getMovies = async(url)=>{
         setIsLoading(true)
