@@ -3,6 +3,7 @@ import { Search } from './Search'
 import { Movies } from './Movies'
 import { Navbar } from './Navbar'
 import './App.css'
+import { SearchBar } from './SearchBar'
 
 export const Home = () => {
 
@@ -10,8 +11,7 @@ export const Home = () => {
     <>
       <div className='bg w-full '>
         <Navbar />
-        <Search />
-        <Movies />
+        <Movies /> 
       </div>
 
     </>

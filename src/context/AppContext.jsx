@@ -9,10 +9,11 @@ const ContextProvider = ({children})=>{
     const [isLoading, setIsLoading] = useState(true)
     const [movies, setMovies] = useState([])
     const [isError, setIsError] = useState({show: false, msg: ''})
-    const [query, setQuery] = useState('hacker')
+    const [query, setQuery] = useState('movies')
 
-    const API_URL = `https://www.omdbapi.com/?apikey=${import.meta.env.VITE_API_KEY}&s=${query}`;
+    const API_URL = `https://www.omdbapi.com/?apikey=${import.meta.env.VITE_API_KEY}&s=${query}&count=250`;
 
+  
     const getMovies = async(url)=>{
         setIsLoading(true)
         try {
@@ -52,7 +53,7 @@ const ContextProvider = ({children})=>{
     }, [query])
 
 
-    const allData = {isError, isLoading, movies, query, setQuery}
+    const allData = {isError, isLoading, movies, setQuery, URL}
 
 
     return (

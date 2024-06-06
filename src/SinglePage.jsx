@@ -7,7 +7,7 @@ export const SinglePage = () => {
   const { id } = useParams();
   const { movies } = useAppContext();
   const data = movies.filter((movieData) => id === movieData.imdbID)
-  console.log(data);
+  // console.log(data);
 
   return (
     <>

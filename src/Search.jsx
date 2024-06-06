@@ -5,10 +5,6 @@ export const Search = () => {
 
   const {query, setQuery, isError} = useAppContext();
 
-   
-  const handleSubmit = ()=>{
-  
-  }
 
   return (
     <>
@@ -21,7 +17,7 @@ export const Search = () => {
             </svg>
           </div>
           <input type="text" value={query} onChange={(e)=>setQuery(e.target.value)} className="w-full max-w-[160px] bg-white pl-2 text-base font-semibold outline-0" placeholder="Search..." id="searchInput" />
-          <input onClick={handleSubmit} type="button" value="Search" className="bg-blue-500 p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-blue-800 transition-colors" />
+          <input  type="button" value="Search" className="bg-blue-500 p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-blue-800 transition-colors" />
         </div>
       </div>
     </div>
